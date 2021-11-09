@@ -8,11 +8,10 @@ class Root extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // 去处debug角标
       title: 'This is Title',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('有状态组建'),
+          title: const Text('Padding Row Column Expanded'),
         ),
         body: const HomeContent(),
       ),
@@ -25,6 +24,15 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text('xxx');
+    return Container(
+      decoration:
+          BoxDecoration(border: Border.all(width: 3, color: Colors.green)),
+      width: 300,
+      // 设置子元素 与 父元素宽高比
+      child: AspectRatio(
+        aspectRatio: 0.5,
+        child: Container(color: Colors.cyan),
+      ),
+    );
   }
 }
