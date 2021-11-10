@@ -1,16 +1,24 @@
-# my_app_f
+# Flutter 路由
 
-A new Flutter project.
+## Flutter 中路由通俗的来讲就是页面的跳转， 在Flutter中通过Navigator 组建管理路由导航。 并提供了管理堆栈的方法。 如： navigator.push  和 Navigator.pop
 
-## Getting Started
+### Flutter 中给我们提供了两种配置路由跳转的方式， 1。 基本路由 2。命名路由
 
-This project is a starting point for a Flutter application.
+## Flutter 基本路由的使用Homepage组建跳转到SearchPage组建。
 
-A few resources to get you started if this is your first Flutter project:
+### 第一步：需要在HomePage 中引入SearchPage。
+```dart
+ import 'pages/SearchPage.dart';
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### 第二部：在HomePage中通过下面方法跳转
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+onPress() {
+  MaterialPageRoute(
+    builder: (BuildContext context) {
+      return Search();
+    }
+  );
+}
+```
