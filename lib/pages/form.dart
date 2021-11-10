@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class FormPage extends StatefulWidget {
-  const FormPage(data, {Key? key}) : super(key: key);
+class FormPage extends StatelessWidget {
+  String title;
 
-  @override
-  _FormPageState createState() => _FormPageState();
-}
+  FormPage(this.title, {Key? key});
 
-class _FormPageState extends State<FormPage> {
-  Map data = {'title': '表单'};
-  _FormPageState() {
-    print(data);
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(data['title']),
-        ),
-        body: const Text('this is from page'));
+      floatingActionButton: FloatingActionButton(
+        child: Text("返回"),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: const Text('this is from page'),
+    );
   }
 }

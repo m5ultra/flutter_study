@@ -23,10 +23,7 @@ class _BusinessState extends State<Business> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (BuildContext context) => const FormPage({
-                    "id": '0x12345',
-                    'data': ['1', 'xxx', 1]
-                  }),
+                  builder: (BuildContext context) => FormPage("页面跳转传值"),
                 ),
               );
             },
