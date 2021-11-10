@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/tabs.dart';
+import '../pages/tabs.dart';
 
 void main() => runApp(const Root());
 
