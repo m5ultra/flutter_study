@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../form.dart';
+import '../form2_stful.dart';
 
 class Business extends StatefulWidget {
   const Business({Key? key}) : super(key: key);
@@ -28,14 +29,21 @@ class _BusinessState extends State<Business> {
                 ),
               );
             },
-            child: const Text('跳转到表单页面'),
+            child: const Text('跳转到无状态表单页面'),
           ),
           const SizedBox(
             height: 20,
           ),
           RaisedButton(
-            onPressed: () {},
-            child: const Text('跳转到表单页面并传值'),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      FromPage2(data: const {"title": '123', 'xxx': 'yyy'}),
+                ),
+              );
+            },
+            child: const Text('跳转到有状态页面并传值'),
           ),
         ],
       ),
