@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FormPage extends StatelessWidget {
-  String title;
+  Map data = {};
 
-  FormPage(this.title, {Key? key});
+  FormPage({Key? key, this.data = const {'title': 'biaodan'}})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +16,9 @@ class FormPage extends StatelessWidget {
         },
       ),
       appBar: AppBar(
-        title: Text(title),
+        title: Text('444'),
       ),
-      body: const Text('this is from page'),
+      body: Text(data['xxx']),
     );
   }
 }
